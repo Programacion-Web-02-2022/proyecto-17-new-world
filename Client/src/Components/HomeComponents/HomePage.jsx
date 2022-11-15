@@ -5,6 +5,8 @@ const HomePage = () => {
     <>
     <h1>
       Pagina principal
+      mostrando any
+      alguna moste
     </h1>
     <hr />
 
