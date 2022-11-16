@@ -1,49 +1,107 @@
 const { response } = require('express');
-const Usuario = require('../models/User')
+const bcrypt = require('bcryptjs');
+const Usuario = require('../models/User');
+const { generarJWT } = require('../helpers/jwtoken')
 
 const crearUsuario = async (req, res = response) => {
 
-    //const { name, email, password } = req.body;
+    const {  email, password } = req.body;
 
     try {
+        let usuario =  await Usuario.findOne({ email }); 
+        if( usuario ) {
+            return res.status(400).json({
+                ok:false,
+                msg: 'Un usuario existe con ese correo'
+            })
+        }
 
-        const usuario = new Usuario( req.body );
+        usuario = new Usuario( req.body );
+
+        //encriptar contraseña
+        const salt = bcrypt.genSaltSync(  );
+        usuario.password = bcrypt.hashSync( password, salt ); 
+        //para guardar el usuario en db
         await usuario.save();
+
+        //Generar token
+        const token = await generarJWT( usuario.id, usuario.name )
     
         res.status(201).json({
             ok: true,
-            msg: 'regstro',
+            uid: usuario.id,
+            name: usuario.name,
+            token,
+            msg: 'Usuario almacenado exitosamente',
         })
         
     } catch (error) {
         res.status(500).json({
             ok: false,
-            msg: 'Contactarse con el administrador del programa'
+            msg: 'Error. Contactarse con el administrador del programa'
         })
     }
 
 };
 
 
-const loginUsuario = (req, res= response ) => {
-
+const loginUsuario = async (req, res= response ) => {
+    
     const { email, password } = req.body;
 
-    res.status(200).json({
-        msg: 'logindeuser',
-        ok:true,
-        email,
-        password
-    })
+    try {
+        const usuario =  await Usuario.findOne({ email });
+        if ( !usuario )  {
+        return res.status(400).json({
+            ok: false,
+            msg:'no existe usuario registrado con ese email'
+        });
+        }
+        //confirmar los pasword
+        const validPassword = bcrypt.compareSync( password, usuario.password );
+        if (!validPassword) {
+            return res.status(400).json({
+                ok:false,
+                msg: 'Contraseña incorrecta'
+            })
+            
+        };
+        //Generar token
+        const token = await generarJWT( usuario.id, usuario.name );
+
+        res.json({
+            ok: true,
+            uid: usuario.id,
+            name: usuario.name,
+            token,
+            msg: 'usuario con token generado',
+        });
+    
+    }   catch (error) {
+        console.log(error)
+        res.status(500).json({
+            ok:false,
+            msg: 'error en el login, contactar al administrador'
+        })
+    }
+
 };
 
-const revalidarToken = (req, res= response ) => {
+
+//revalidar token
+const revalidarToken = async (req, res= response ) => {
+
+
+    const { uid, name } = req.uid;
+
+    //Generar token
+    const token = await generarWJT( uid, name );
 
 
     res.json({
-        msg:'renew'
+        ok:true,
+        token
     })
-
 };
 
 

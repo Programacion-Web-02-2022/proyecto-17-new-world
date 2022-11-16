@@ -1,3 +1,5 @@
+//trabaja de la mano con los routers para detener al usuario si hay algo
+//malo en la validacion de los campo. ej: deja campo vacio
 const { response } = require('express')
 const { validationResult } = require('express-validator')
 
