@@ -6,7 +6,7 @@ const HomePage = () => {
     <h1>
       Pagina principal
       mostrando any
-      alguna moste
+      alguna mostesfdhjsfdsdfhkshkakh
     </h1>
     <hr />
 

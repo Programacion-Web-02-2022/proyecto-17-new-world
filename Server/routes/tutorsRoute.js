@@ -21,9 +21,17 @@ router.post('/create',
     ], 
     crearTutor ); 
 
-router.put('/update', actualizarTutor ); 
+router.put('/:id',
+    [
+        check('name', 'Es obligatorio el nombre del tutor').not().isEmpty(),
+        check('career', 'Es obligatorio la carrera a la que pertenece el tutor').not().isEmpty(),
+        check('skill', 'Es obligatorio escribir reseña del tutor').not().isEmpty(),
+        check('horary', 'Es obligatorio mostrar el horario disponible del tutor').not().isEmpty(),
+        validation
+    ], 
+    actualizarTutor ); 
 
-router.delete('/delete', eliminarTutor ); 
+router.delete('/:id', eliminarTutor ); 
 
 
 module.exports = router;
