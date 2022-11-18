@@ -1,5 +1,5 @@
 import React from 'react'
-import './Mision.css'
+import '../Components/MisionComponents/Mision.css'
 
 const MisionPage = () => {
   return (
