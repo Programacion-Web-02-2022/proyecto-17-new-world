@@ -17,6 +17,8 @@
 }
 
 .contenedores {
+  background-color: #EEEEEE;
+
   flex-flow: row wrap;
   display: flex;
   align-items: center;
