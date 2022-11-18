@@ -9,7 +9,7 @@ const HomePage = () => {
       Pagina principal
     </h1>
     <hr />
-    <div className='contenedor'>
+    <div className='contenedores'>
       <div className='contenedor1'>
         <p>Frase de bienvenida</p>
       </div>

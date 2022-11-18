@@ -1,9 +1,4 @@
-.contenedor {
-    flex-flow: row wrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
 .contenedor1 {
     background-color: rgb(134, 200, 229);
     height: auto;
