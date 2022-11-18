@@ -1,15 +1,22 @@
-import React from 'react'
+import React from 'react';
+import home from '../../Assets/home.jpg'
+import './Home.css'
 
 const HomePage = () => {
   return (
     <>
     <h1>
       Pagina principal
-      mostrando any
-      alguna mostesfdhjsfdsdfhkshkakh
     </h1>
     <hr />
-
+    <div className='contenedor'>
+      <div className='contenedor1'>
+        <p>Frase de bienvenida</p>
+      </div>
+      <figure >
+      <img src={ home } alt="imagenhome" className='imagen' />
+      </figure>
+    </div>
     </>
   )
 }

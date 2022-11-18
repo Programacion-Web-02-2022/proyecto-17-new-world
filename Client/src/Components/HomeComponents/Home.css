@@ -1,0 +1,17 @@
+.contenedor {
+    flex-flow: row wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.contenedor1 {
+    background-color: rgb(134, 200, 229);
+    height: auto;
+    width: 750px;
+    border-radius: 5px;
+    }
+.imagen{
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
