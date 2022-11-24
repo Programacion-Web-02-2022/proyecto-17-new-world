@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const { number } = require('prop-types');
 
 const TutorSchema = Schema ({
 
@@ -22,11 +21,17 @@ const TutorSchema = Schema ({
         type: String,
         required: true
     },
-    stars: {
+     stars: {
         type: [{
-            value:{}
+            user: {
+                type:String
+            },
+            value: {
+                type:Number,
+                default:4
+            } 
         }]
-    },
+    }, 
     comment:{
         default: [{}]
     },
@@ -55,5 +60,5 @@ module.exports = model('Tutor', TutorSchema );
 TutorSchema.stars.push({
     user:userId,
     value:value
-})
- */
+}) */
+ 

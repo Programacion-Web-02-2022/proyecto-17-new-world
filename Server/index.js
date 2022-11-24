@@ -26,6 +26,7 @@ app.use( express.json());
 //rutas
 app.use('/api/auth', require('./routes/authRoute') );
 app.use('/api/tutors', require('./routes/tutorsRoute'))
+app.use('/api/cluster', require('./routes/clusterRoute'))
 
 
 //escucahr peticiones
