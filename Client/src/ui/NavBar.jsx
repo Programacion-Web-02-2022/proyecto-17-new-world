@@ -78,15 +78,9 @@ export const Navbar = () => {
                             Rodolfo
                         </span>
 
-<<<<<<< HEAD
-                        <button 
-                            className='btn btn-close-white'
-                            onClick={ onLogout }
-=======
                         <button
                             className='nav-item nav-link btn'
                             onClick={onLogout}
->>>>>>> e4562cbed58be5a29e84be40f1b885d55fa25357
                         >
                             <i className='fas fa-sign-out-alt' ></i>
                             <span>Logout</span>
