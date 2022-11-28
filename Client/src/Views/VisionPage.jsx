@@ -4,6 +4,7 @@ import '../Views/VisionPage.css'
 const VisionPage = () => {
   return (
     <>
+      <hr />
       <div className='contenedores'>
 
         <div className='contenedorV1'>

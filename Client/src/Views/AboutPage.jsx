@@ -4,6 +4,7 @@ import '../Views/AboutPage.css'
 const AboutPage = () => {
   return (
     <>
+      <hr />
       <div className='contenedores'>
 
         <div className='contenedorA1'>

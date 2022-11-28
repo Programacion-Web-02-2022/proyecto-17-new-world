@@ -4,6 +4,7 @@ import '../Views/MisionPage.css'
 const MisionPage = () => {
   return (
     <>
+      <hr />
       <div className='contenedores'>
 
         <div className='contenedorM1'>
