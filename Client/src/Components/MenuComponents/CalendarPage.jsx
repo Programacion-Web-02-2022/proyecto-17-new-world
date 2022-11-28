@@ -17,21 +17,12 @@ const events =[{
 
 
 const CalendarPage = () => {
-  return (
+    return (
     <>
-        <Calendar
-          culture='es'
-          localizer={localizer}
-          events={ events }
-          startAccessor="start"
-          endAccessor="end"
-          style={{ height: 'calc( 100vh - 150px )' }}
-          messages={ getMessagesES() }
-        />
-        
-        
+        <h2>aqui aparecera tu calendario</h2>
     </>
-  )
+    
+    )
 }
 
 export default CalendarPage;

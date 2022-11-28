@@ -14,24 +14,24 @@ import CalendarPage from '../Components/MenuComponents/CalendarPage'
 const HomeRoutes = () => {
   return (
     <>
-        <Navbar />
-        
-        <div className="container" >
+      <Navbar />
+
+      <div className="container" >
         <Routes>
-        <Route path="home" element={<HomePage />} />
-        <Route path="search" element={<SearchPage />} />
-        <Route path="mision" element={<MisionPage />} />
-        <Route path="vision" element={<VisionPage />} />
-        <Route path="about" element={<AboutPage />} />
-        <Route path="hamburger" element={<HamburgerPage />} />
-        <Route path="sesiones" element={<SesionsPage />} />
-        <Route path="calendar" element={<CalendarPage />} />
+          <Route path="home" element={<HomePage />} />
+          <Route path="search" element={<SearchPage />} />
+          <Route path="mision" element={<MisionPage />} />
+          <Route path="vision" element={<VisionPage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="hamburger" element={<HamburgerPage />} />
+          <Route path="sesiones" element={<SesionsPage />} />
+          <Route path="calendar" element={<CalendarPage />} />
 
-        <Route path="/" element={<Navigate to="/home"/>} />
-        </Routes> 
-        </div>
+          <Route path="/" element={<Navigate to="/home" />} />
+        </Routes>
+      </div>
 
-        <Footer />
+      <Footer />
 
     </>
   )
