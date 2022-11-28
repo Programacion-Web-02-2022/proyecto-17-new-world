@@ -2,6 +2,10 @@ p {
     margin: 0;
 }
 
+hr {
+    border: 0;
+}
+
 .contenedorA1 {
     background-color: rgb(134, 200, 229);
     height: auto;
@@ -10,11 +14,10 @@ p {
     text-align: center;
     padding: 0.7%;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .contenedorA2 {
-    background-color: #ffffff;
     height: auto;
     width: 100%;
     border-radius: 5px 5px 0px 0px;

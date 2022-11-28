@@ -5,9 +5,6 @@ import './Home.css'
 const HomePage = () => {
   return (
     <>
-      <h1>
-        Página principal
-      </h1>
       <hr />
       <div className='contenedores'>
         <div className='contenedor1'>
