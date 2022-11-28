@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Hamburger = () => {
 
@@ -7,10 +8,10 @@ const Hamburger = () => {
     <h1>
         Menu
       </h1>
-    <nav class="main-navigation">
+    <nav className="main-navigation">
         <ul>
-            <li><a href="/sesiones">Mis sesiones</a></li>
-            <li><a href="/calendar">Calendario</a></li>
+            <li><NavLink to="/sesiones">Mis sesiones</NavLink></li>
+            <li><NavLink to="/calendar">Calendario</NavLink></li>
         </ul>
     </nav>
     </>

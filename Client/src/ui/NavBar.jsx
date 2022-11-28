@@ -79,10 +79,11 @@ export const Navbar = () => {
                         </span>
 
                         <button 
-                            className='nav-item nav-link btn'
+                            className='btn btn-close-white'
                             onClick={ onLogout }
                         >
-                            Logout
+                            <i className='fas fa-sign-out-alt' ></i>
+                            <span>Logout</span>
                         </button>
                     </ul>
                 </div>

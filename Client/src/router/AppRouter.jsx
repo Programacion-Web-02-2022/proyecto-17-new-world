@@ -2,7 +2,7 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import { HashRouter as Router } from 'react-router-dom'
 import { Navigate, Route, Routes } from 'react-router-dom'
-import LoginPage from '../Views/LoginPage'
+import LoginPage from '../auth/LoginPage'
 import UsersRoutes from './UsersRoutes'
 import UserServices from '../Services/UserServices'
 
