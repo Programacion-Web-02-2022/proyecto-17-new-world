@@ -2,17 +2,17 @@ import React from "react";
 
 const Hamburger = () => {
 
-  return(
+  return (
     <>
-    <h1>
-        Menu
+      <h1>
+        Menú
       </h1>
-    <nav class="main-navigation">
+      <nav class="main-navigation">
         <ul>
-            <li><a href="/sesiones">Mis sesiones</a></li>
-            <li><a href="/calendar">Calendario</a></li>
+          <li><a href="/sesiones">Mis sesiones</a></li>
+          <li><a href="/calendar">Calendario</a></li>
         </ul>
-    </nav>
+      </nav>
     </>
 
   )
