@@ -13,14 +13,5 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
-
-.contenedores {
-  background-color: #EEEEEE;
-
-  flex-flow: row wrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-sizing: border-box;
 }
