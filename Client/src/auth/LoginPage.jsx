@@ -1,7 +1,17 @@
 import React from 'react';
 import './LoginPage.css';
+import { useNavigate } from 'react-router-dom'
 
 const LoginPage = () => {
+
+   const navigate = useNavigate();
+
+    const onLogin = () => {
+    navigate('/',{
+      replace: true
+    }) 
+}
+
     return (
         <div className="container login-container">
             <div className="row">
@@ -23,11 +33,11 @@ const LoginPage = () => {
                             />
                         </div>
                         <div className="d-grid gap-2">
-                            <input 
-                                type="submit"
-                                className="btnSubmit"
-                                value="Login" 
-                            />
+                        <button 
+                            className='btn btn-primary' 
+                            onClick={ onLogin }>
+                            Login
+                            </button>
                         </div>
                     </form>
                 </div>
